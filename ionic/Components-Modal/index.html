@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"
+        
+        <link href="lib/ionic.min.css" rel="stylesheet">
+    </head>
+    <body ng-controller="modalCtrl">
+        <ion-header-bar class="bar-positive" align-title="center">
+	        <h1 class="title">Contacts</h1>
+	        <div class="button button-clear">
+		        <button class="button button-icon ion-compose" ng-click="show()"></button>
+	        </div>
+        </ion-header-bar>
+    </body>
+    <script>
+        var module = angular.module("modal", ["ionic"]);
+        module.controller("modalCtrl", function($scope, $ionicModal) {
+            
+        });
+    </script>
+</html>
