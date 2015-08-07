@@ -18,7 +18,11 @@
     <script>
         var module = angular.module("app", ["ionic"]);
         module.controller("modalCtrl", function($scope, $ionicModal) {
-            
+            $scope.tasks = [
+                {desc: "task1"},
+                {desc: "task2"},
+                {desc: "task3"}
+            ]
         });
     </script>
 </html>
