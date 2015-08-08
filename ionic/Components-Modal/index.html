@@ -97,7 +97,7 @@
             });
 
             $scope.addTask = function(task) {
-                if (task.desc) {
+                if (task) {
                     $scope.tasks.push(task);
                     $scope.modal.hide();    
                 }
