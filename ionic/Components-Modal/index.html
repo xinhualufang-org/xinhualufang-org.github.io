@@ -46,7 +46,7 @@
                 {desc: "task3"}
             ];
 
-            $ionicModal.formTemplateUrl("templates/modal.html", {
+            $ionicModal.fromTemplateUrl("templates/modal.html", {
                 scope: $scope
             }).then(function(modal) {
                 $scope.modal = modal;
