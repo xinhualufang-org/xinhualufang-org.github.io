@@ -21,11 +21,11 @@
             }
         ```
         
-        * **scope**，`{object}`。:octocat:不知道这个参数有什么作用
-        * **animation**，`{string}`。modal显示和隐藏的动画，缺省值为`slide-in-up`。:octocat:其他动画需要自己实现，怎么实现未尝试
-        * **focusFirstInput**，`{boolean}`。Modal显示的时候modal的第一个input是否自动获取焦点，IOS中会显示键盘，在Android中需要使用keyboard插件强制显示键盘，缺省值为`false`。
-        * **backdropClickToClose**，`{boolean}`。当点击modal之外时是否关闭modal，缺省值为`true`。
-        * **hardwareBackButtonClose**，{boolean}。在Andoird或类似设备上点击物理返回时，modal是否能够被关闭，缺省值为`true`。
+        * scope，`{object}`。:octocat:不知道这个参数有什么作用
+        * animation，`{string}`。modal显示和隐藏的动画，缺省值为`slide-in-up`。:octocat:其他动画需要自己实现，怎么实现未尝试
+        * focusFirstInput，`{boolean}`。Modal显示的时候modal的第一个input是否自动获取焦点，IOS中会显示键盘，在Android中需要使用keyboard插件强制显示键盘，缺省值为`false`。
+        * backdropClickToClose，`{boolean}`。当点击modal之外时是否关闭modal，缺省值为`true`。
+        * hardwareBackButtonClose，{boolean}。在Andoird或类似设备上点击物理返回时，modal是否能够被关闭，缺省值为`true`。
     
 * **fromTemplateUrl(templateUrl, options)**
 
