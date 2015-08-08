@@ -13,7 +13,7 @@
     * options
     ```
         {
-            scope: $scope,
+            scope: $scope,      //`object`
             animation: "slide-in-up",
             focusFirstInput: false,
             backdropClickToClose: true,
