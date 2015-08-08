@@ -9,9 +9,9 @@
     </head>
     <body ng-controller="modalCtrl">
         <ion-header-bar class="bar-royal" align-title="center">
-	        <h1 class="title">任务</h1>
+	        <h1 class="title">任务DEMO2</h1>
 	        <div class="button button-clear">
-		        <button class="button button-icon ion-compose" ng-click="modal.show()"></button>
+		        <button class="button button-icon ion-compose" ng-click="addTask()"></button>
 	        </div>
         </ion-header-bar>
         <ion-content class="has-header">
@@ -24,7 +24,7 @@
         <ion-modal-view>
             <ion-header-bar class="bar bar-header bar-positive" align-title="center">
                 <h1 class="title">添加任务</h1>
-                <button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+                <button class="button button-clear button-primary" ng-click="modal.remove()">取消</button>
             </ion-header-bar>
             <ion-content class="padding">
                 <div class="list">
@@ -45,12 +45,15 @@
                 {desc: "task2"},
                 {desc: "task3"}
             ];
-
-            $ionicModal.fromTemplateUrl("templates/modal.html", {
-                scope: $scope
-            }).then(function(modal) {
-                $scope.modal = modal;
-            });
+            
+            $scope.addTask = function() {
+            	$ionicModal.fromTemplateUrl("templates/modal.html", {
+            		scope: $scope
+            	}).then(function(modal) {
+            		$scope.modal = modal;
+            		modal.show();
+            	});
+            };
 
             $scope.addTask = function(task) {
                 if (task) {
