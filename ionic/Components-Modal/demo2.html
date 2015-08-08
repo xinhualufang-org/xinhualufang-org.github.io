@@ -11,7 +11,7 @@
         <ion-header-bar class="bar-royal" align-title="center">
 	        <h1 class="title">任务DEMO2</h1>
 	        <div class="button button-clear">
-		        <button class="button button-icon ion-compose" ng-click="addTask()"></button>
+		        <button class="button button-icon ion-compose" ng-click="showModal()"></button>
 	        </div>
         </ion-header-bar>
         <ion-content class="has-header">
@@ -46,7 +46,7 @@
                 {desc: "task3"}
             ];
             
-            $scope.addTask = function() {
+            $scope.showModal = function() {
             	$ionicModal.fromTemplateUrl("templates/modal.html", {
             		scope: $scope
             	}).then(function(modal) {
