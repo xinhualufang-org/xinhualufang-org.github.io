@@ -14,6 +14,11 @@
 		        <button class="button button-icon ion-compose" ng-click="add()"></button>
 	        </div>
         </ion-header-bar>
+        <ion-content class="has-header">
+            <ul class="list">
+                <li class="item" ng-repeat="task in tasks" ng-bind="task"></li>
+            </ui>
+        </ion-content>
     </body>
     <script>
         var module = angular.module("app", ["ionic"]);
