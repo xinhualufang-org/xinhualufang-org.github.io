@@ -32,6 +32,50 @@
                         <span class="input-label">任务</span>
                         <input type="text" ng-model="newTask.desc">
                     </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text">
+                    </label>
                     <button class="button button-full button-positive" ng-click="addTask(newTask)">添加</button>
                 </div>
             </ion-content>
@@ -54,6 +98,7 @@
 
             $scope.addTask = function(task) {
                 $scope.tasks.push(task);
+                $scope.modal.hide();
             };
 
         });
