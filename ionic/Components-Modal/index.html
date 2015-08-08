@@ -11,23 +11,51 @@
         <ion-header-bar class="bar-royal" align-title="center">
 	        <h1 class="title">任务</h1>
 	        <div class="button button-clear">
-		        <button class="button button-icon ion-compose" ng-click="add()"></button>
+		        <button class="button button-icon ion-compose" ng-click="modal.show()"></button>
 	        </div>
         </ion-header-bar>
         <ion-content class="has-header">
             <ul class="list">
-                <li class="item" ng-repeat="task in tasks" ng-bind="task"></li>
+                <li class="item" ng-repeat="task in tasks" ng-bind="task.desc"></li>
             </ui>
         </ion-content>
     </body>
+    <script id="templates/modal.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive" align-title="center">
+                <h1 class="title">添加任务</h1>
+                <button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label">任务</span>
+                        <input type="text" ng-model="newTask.desc">
+                        <button class="button button-full button-positive" ng-click="addTask(newTask)">添加</button>
+                    </label>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
     <script>
         var module = angular.module("app", ["ionic"]);
-        module.controller("modalCtrl", function($scope) {
+        module.controller("modalCtrl", function($scope, $ionicModal) {
             $scope.tasks = [
                 {desc: "task1"},
                 {desc: "task2"},
                 {desc: "task3"}
-            ]
+            ];
+
+            $ionicModal.formTemplateUrl("templates/modal.html", {
+                scope: $scope
+            }).then(function(modal) {
+                $scope.modal = modal;
+            });
+
+            $scope.addTask = function(task) {
+                $scope.tasks.push(task);
+            };
+
         });
     </script>
 </html>
