@@ -9,6 +9,8 @@
 ###方法
 
 * **fromTemplate(templateString, options)**
+    * templateString,string类型，html字符串作为modal的内容；
+    * options,
 
 
 * **fromTemplateUrl(templateUrl, options)**
