@@ -13,13 +13,16 @@
     * options
     ```
         {
-            scope: $scope,              //{object} :octocat:
+            scope: $scope,
             animation: "slide-in-up",
             focusFirstInput: false,
             backdropClickToClose: true,
             hardwareBackButtonClose
         }
     ```
+        * **scope**，{object}，:octocat:不知道这个参数有什么作用
+        * **animation**，{string}，modal显示和隐藏的动画，缺省值为`slide-in-up`。:octocat:其他动画需要自己实现，怎么实现未尝试
+    
 
 
 * **fromTemplateUrl(templateUrl, options)**
