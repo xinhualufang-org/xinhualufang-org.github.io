@@ -13,7 +13,7 @@
     * options
     ```
         {
-            scope: $scope,      //`object`
+            scope: $scope,              //{object} :octocat:
             animation: "slide-in-up",
             focusFirstInput: false,
             backdropClickToClose: true,
