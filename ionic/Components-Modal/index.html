@@ -97,8 +97,10 @@
             });
 
             $scope.addTask = function(task) {
-                $scope.tasks.push(task);
-                $scope.modal.hide();
+                if (task.desc) {
+                    $scope.tasks.push(task);
+                    $scope.modal.hide();    
+                }
             };
 
         });
