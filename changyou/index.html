@@ -13,7 +13,7 @@
 		module.controller("ctrl", function($scope, $http) {
 			$http({
 				method: "get",
-				url: "http://tl.cyg.changyou.com"
+				url: "http://tl.cyg.changyou.com/?profession=0&level=80-89&have_chosen=profession*0%20level*80-89"
 			}).success(function(data) {
 				console.log(data);
 			}).error(function(err) {
