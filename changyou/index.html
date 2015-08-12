@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<link href="../ionic/libs/ionic/css/ionic.min.css" rel="stylesheet">
+		<script src="../ionic/libs/ionic/js/ionic.bundle.min.js"></script>
+	</head>
+	<body ng-controller="ctrl">
+		<button class="button button-block button-positive">查询</button>
+	</body>
+	<script>
+		var module = angular.module("app", ["ionic"]);
+		module.controller("ctrl", function($scope, $http) {
+			$http({
+				method: "get",
+				url: "http://111.206.12.55:80"
+			}).success(function(data) {
+				console.log(data);
+			}).error(function(err) {
+				console.log("error");
+			});
+		});
+	</script>
+</html>
