@@ -1,5 +1,9 @@
 # 畅易阁APP
 >变量名采用匈牙利命名法
+>版本1.0目标
+- [ ] 实现无条件查询信息的展示，包括：门派性别头像、
+- [ ] 上拉再次加载20条；
+- [ ] 
 
 ### 1. ul源码---采集于`2015年8月14号`
 ```html
@@ -42,6 +46,7 @@
 
 ### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表，然后得到20个li对象`aItem`。
 ```javascript
+var aItems = new Array();	//此数组存储所有aItem数据
 function analysis(str) {	//str为html源代码
 	var oParser = new DOMParser();
 	var oText = oParser.parseFromString(str, "text/html");
@@ -53,8 +58,18 @@ function analysis(str) {	//str为html源代码
 ### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
 ```javascript
 	for (var i=0; i<20; i++) {
+		var jsItem = {
+			serial_num: "",		//商品号
+			info: "",			//[武当 男 119级]
+			name: "",			//角色名
+			cl: "",				//bool，重楼
+			score_equipment: "",//装备评分
+			score_practice: "",	//修炼评分
+			score_advanced: ""	//进阶评分
+		};
 		//得到商品号，18位或17位
 		aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
+		
 	}
 ```
 
