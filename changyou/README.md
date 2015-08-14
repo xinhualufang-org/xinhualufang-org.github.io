@@ -1,4 +1,13 @@
 # 畅易阁APP
+>变量名采用匈牙利命名法
+
+### 1. 获取html源代码，然后转为dom对象，接着通过id找到ul列表
+```javascript
+function analysis(str) {	//str为html源代码
+	var oParser = new DOMParser();
+	var 
+}
+```
 
 ### 条目展示(href中包括serial_num商品号)
 ```html
@@ -38,7 +47,10 @@
 	</li>
 </ul>
 ```
-
+* 首先得到li的数组
+```javascript
+	var aItem = 
+```
 * item-img 头像
 * item-info 摘要信息
   * title
