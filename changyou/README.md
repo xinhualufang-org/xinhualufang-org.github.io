@@ -40,33 +40,20 @@
 </ul>
 ```
 
-### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表
+### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表，然后得到20个li对象`aItem`。
 ```javascript
 function analysis(str) {	//str为html源代码
 	var oParser = new DOMParser();
 	var oText = oParser.parseFromString(str, "text/html");
 	var oUl = oText.getElementById("J_good_list");
+	var aItem = oUl.getElementsByTagName("li");
 }
 ```
 
-### 条目展示(href中包括serial_num商品号)
-
-* 首先得到li的数组
+### 3. 从aItem数组中循环分析每个元素得到账号简略信息。
 ```javascript
-	var aItem = 
+
 ```
-* item-img 头像
-* item-info 摘要信息
-  * title
-    * name 角色名+性别+等级
-    * icon-cl 是否拥有重楼
-  * detail
-    * 装备评分
-    * 修炼评分
-    * 进阶评分
-  * server-and-time
-* item-opr
-  * price 价格
 
 ### 角色详情
 * good-info
