@@ -50,9 +50,12 @@ function analysis(str) {	//str为html源代码
 }
 ```
 
-### 3. 从aItem数组中循环分析每个元素得到账号简略信息。
+### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
 ```javascript
-
+	for (var i=0; i<20; i++) {
+		//得到商品号，18位或17位
+		aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
+	}
 ```
 
 ### 角色详情
