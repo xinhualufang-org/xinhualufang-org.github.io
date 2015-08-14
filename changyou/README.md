@@ -60,14 +60,12 @@ function analysis(str) {	//str为html源代码
 
 | 头像 | 文件名	|
 | :----------: | :----------: |
-![](img/pro1.jpg "天龙&少林") | asafasf
-| a | b |
-
-![](img/pro2.jpg "峨眉|天山")
-![](img/pro3.jpg "丐帮|武当")
-![](img/pro4.jpg "明教|逍遥")
-![](img/pro5.jpg "慕容|星宿")
-![](img/pro6.jpg "唐门")
+![](img/pro1.jpg "天龙&少林") | pro1.jpg
+![](img/pro2.jpg "峨眉&天山") | pro2.jpg
+![](img/pro3.jpg "丐帮|武当") | pro3.jpg
+![](img/pro4.jpg "明教|逍遥") | pro4.jpg
+![](img/pro5.jpg "慕容|星宿") | pro5.jpg
+![](img/pro6.jpg "唐门")      | pro6.jpg     
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
