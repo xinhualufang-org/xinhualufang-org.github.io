@@ -1,7 +1,7 @@
 # 畅易阁APP
 
 ### 条目展示(href中包括serial_num商品号)
-```
+```html
 <ul class="pg-goods-list" id="J_good_list">
 	<li class="role-item first odd">
 		<span class="item-img">
