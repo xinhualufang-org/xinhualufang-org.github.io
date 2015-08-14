@@ -2,17 +2,6 @@
 >变量名采用匈牙利命名法
 
 ### 1. ul源码---采集于`2015年8月14号`
-
-### 1. 获取html源代码，然后转为dom对象，接着通过id找到ul列表
-```javascript
-function analysis(str) {	//str为html源代码
-	var oParser = new DOMParser();
-	var oText = oParser.parseFromString(str, "text/html");
-	var oUl = oText.getElementById("J_good_list");
-}
-```
-
-### 条目展示(href中包括serial_num商品号)
 ```html
 <ul class="pg-goods-list" id="J_good_list">
 	<li class="role-item first odd">
@@ -50,6 +39,18 @@ function analysis(str) {	//str为html源代码
 	</li>
 </ul>
 ```
+
+### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表
+```javascript
+function analysis(str) {	//str为html源代码
+	var oParser = new DOMParser();
+	var oText = oParser.parseFromString(str, "text/html");
+	var oUl = oText.getElementById("J_good_list");
+}
+```
+
+### 条目展示(href中包括serial_num商品号)
+
 * 首先得到li的数组
 ```javascript
 	var aItem = 
