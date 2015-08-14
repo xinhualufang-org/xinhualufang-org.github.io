@@ -1,6 +1,44 @@
 # 畅易阁APP
 
-### 条目展示href中包括serial_num商品号
+### 条目展示(href中包括serial_num商品号)
+```
+<ul class="pg-goods-list" id="J_good_list">
+	<li class="role-item first odd">
+		<span class="item-img">
+			<a target="_blank" href="http://tl.cyg.changyou.com/goods/char_detail?serial_num=20150801954285459" class="r-img pro3-1"></a>
+		</span>
+		<dl class="item-info">
+			<dt class="title">
+				<a href="http://tl.cyg.changyou.com/goods/char_detail?serial_num=20150801954285459" target="_blank">
+					<span class="name">[武当 男 119级]</span>
+					EmperoR
+				</a>
+				<i class="icon-cl" title="该角色拥有重楼装备">&nbsp;</i>
+			</dt>
+			<dd class="detail">
+				<span class="di">装备评分：<b>706790</b></span>
+				<i class="ds">|</i>
+				<span class="di">修炼评分：<b>5480</b></span>
+				<i class="ds">|</i>
+				<span class="di">进阶评分：<b>3720</b></span>
+			</dd>
+			<dd class="server-and-time">
+				<span class="server-info" data-wordId="5040" title="">游戏区服：加载中...</span>
+				<p class="time">剩余时间：07天22小时57分钟</p>
+			</dd>
+		</dl>
+		<div class="item-opr">
+			<p class="price">￥160000</p>
+			<p>
+				<a class="btn-buy-small" href="http://tl.cyg.changyou.com/goods/char_detail?serial_num=20150801954285459" target="_blank">
+					<span class="span">立即购买</span>
+				</a>
+			</p>
+		</div>
+	</li>
+</ul>
+```
+
 * item-img 头像
 * item-info 摘要信息
   * title
