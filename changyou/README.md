@@ -1,11 +1,14 @@
 # 畅易阁APP
 >变量名采用匈牙利命名法
 
+### 1. ul源码---采集于`2015年8月14号`
+
 ### 1. 获取html源代码，然后转为dom对象，接着通过id找到ul列表
 ```javascript
 function analysis(str) {	//str为html源代码
 	var oParser = new DOMParser();
-	var 
+	var oText = oParser.parseFromString(str, "text/html");
+	var oUl = oText.getElementById("J_good_list");
 }
 ```
 
