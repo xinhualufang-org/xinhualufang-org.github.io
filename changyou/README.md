@@ -108,3 +108,9 @@ function analysis(str) {	//str为html源代码
 	* tab_7 真元
 	* tab_8 子女
 	* tab_9 神鼎
+
+---
+#### 如果您觉得本文的内容对您有所帮助，您可以支付宝(左)或微信(右)：
+
+![](../img/alipay.png)
+![](../img/weixinpay.png)
