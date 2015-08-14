@@ -56,6 +56,8 @@ function analysis(str) {	//str为html源代码
 ```
 
 ### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
+	* 关于头像
+		![](img/pro1.jpg)
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
