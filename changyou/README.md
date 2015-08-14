@@ -60,9 +60,9 @@ function analysis(str) {	//str为html源代码
 
 | 头像 | 文件名	|
 | :----------: | :----------: |
+| ![](img/pro1.jpg "天龙|少林") | b |
 | a | b |
-| a | b |
-![](img/pro1.jpg "天龙|少林")
+
 ![](img/pro2.jpg "峨眉|天山")
 ![](img/pro3.jpg "丐帮|武当")
 ![](img/pro4.jpg "明教|逍遥")
