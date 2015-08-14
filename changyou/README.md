@@ -1,8 +1,8 @@
 # 畅易阁APP
 > 1. 变量名采用匈牙利命名法
 2. 版本1.0目标
-	- [ ] 实现无条件查询信息的展示，包括：门派性别的头像、门派、性别、等级、角色名、是否有重楼、装备评分、修炼评分、进阶评分；
-	- [ ] 上拉再次加载20条；
+	- [ ] 实现`无条件查询`信息的展示，包括：门派性别的头像、门派、性别、等级、角色名、是否有重楼、装备评分、修炼评分、进阶评分；
+	- [ ] 上拉加载20条；
 	- [ ] 
 
 ### 1. ul源码---采集于`2015年8月14号`
@@ -59,6 +59,7 @@ function analysis(str) {	//str为html源代码
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
+			imgcss: "",			//头像类
 			serial_num: "",		//商品号
 			group: "",			//门派
 			sex: "",			//性别
@@ -70,7 +71,8 @@ function analysis(str) {	//str为html源代码
 			score_advanced: ""	//进阶评分
 		};
 		//得到商品号，18位或17位
-		aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
+		jsItem.serial_num = aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
+		//门派+性别+等级
 		
 	}
 ```
