@@ -57,7 +57,13 @@ function analysis(str) {	//str为html源代码
 
 ### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
 * 关于头像
-	![](img/pro1.jpg)
+
+![](img/pro1.jpg "天龙|少林")
+![](img/pro2.jpg "峨眉|天山")
+![](img/pro3.jpg "丐帮|武当")
+![](img/pro4.jpg "明教|逍遥")
+![](img/pro5.jpg "慕容|星宿")
+![](img/pro6.jpg "唐门")
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
