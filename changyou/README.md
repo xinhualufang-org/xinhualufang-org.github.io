@@ -58,14 +58,14 @@ function analysis(str) {	//str为html源代码
 ### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
 * 关于头像
 
-| 头像 | 文件名	|
-| :----------: | :----------: |
-![](img/pro1.jpg "天龙&少林") | pro1.jpg
-![](img/pro2.jpg "峨眉&天山") | pro2.jpg
-![](img/pro3.jpg "丐帮&武当") | pro3.jpg
-![](img/pro4.jpg "明教&逍遥") | pro4.jpg
-![](img/pro5.jpg "慕容&星宿") | pro5.jpg
-![](img/pro6.jpg "唐门")      | pro6.jpg     
+|            头像             |  文件名	 | 					          background-position                                  |
+| :-------------------------: | :------: | :-----------------------------------------------------------------------------: |
+![](img/pro1.jpg "天龙&少林") | pro1.jpg | TL男：-5px -5px <br>TL女：-95px -5px <br>SL男：-5px -95px <br>SL女：-95px -95px |
+![](img/pro2.jpg "峨眉&天山") | pro2.jpg | EM男：-5px -5px <br>EM女：-95px -5px <br>TS男：-5px -95px <br>TS女：-95px -95px |
+![](img/pro3.jpg "丐帮&武当") | pro3.jpg | GB男：-5px -5px <br>GB女：-95px -5px <br>WD男：-5px -95px <br>WD女：-95px -95px | 
+![](img/pro4.jpg "明教&逍遥") | pro4.jpg | MJ男：-5px -5px <br>MJ女：-95px -5px <br>XY男：-5px -95px <br>XY女：-95px -95px |
+![](img/pro5.jpg "慕容&星宿") | pro5.jpg | MR男：-5px -5px <br>MR女：-95px -5px <br>XX男：-5px -95px <br>XX女：-95px -95px |
+![](img/pro6.jpg "唐门")      | pro6.jpg | TM男：-5px -5px <br>TM女：-95px -5px                                            |
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
