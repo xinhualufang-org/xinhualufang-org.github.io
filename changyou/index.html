@@ -16,15 +16,15 @@
 					<div class="ub ub-ver ub-f1 xhlf-item-r">
 						<div><span ng-bind="item.name"></span><i class="{{item.cl}}"></i></div>
 						<div class="ub ub-f1 ub-ac">
-							<div class="ub-f1">{{item.group}} &nbsp;&nbsp; {{item.grade}}</div>
-							<div><b class="xhlf-price">{{item.price}}</b></div>
+							<div class="ub-f1"><span ng-bind="item.group"></span>&nbsp;&nbsp;<span ng-bind="item.grade"></span></div>
+							<div><b class="xhlf-price" ng-bind="item.price"></b></div>
 						</div>
 					</div>
 				</div>
 				<div>
-					装备：{{item.score_equipment}} &nbsp;&nbsp;
-					修炼：{{item.score_practice}} &nbsp;&nbsp;
-					进阶：{{item.score_advanced}}
+					<span ng-bind="item.score_equipment"></span>&nbsp;&nbsp;
+					<span ng-bind="item.score_practice"></span>&nbsp;&nbsp;
+					<span ng-bind="item.score_advanced"></span>
 				</div>
 			</div>
 		</ion-content>
@@ -37,7 +37,6 @@
 				method: "get",
 				url: "http://tl.cyg.changyou.com"
 			}).success(function(data) {
-//				console.log(data);
 				$scope.analysis(data);
 			}).error(function(err) {
 				console.log("error");
@@ -83,9 +82,9 @@
 					jsItem.cl = aItem[i].querySelector(".icon-cl") ? "hascl" : "nocl";
 					//评分
 					var aScore = aItem[i].getElementsByTagName("b");
-					jsItem.score_equipment = aScore[0].innerHTML;
-					jsItem.score_practice = aScore[1].innerHTML;
-					jsItem.score_advanced = aScore[2].innerHTML;
+					jsItem.score_equipment = "装备：" + aScore[0].innerHTML;
+					jsItem.score_practice = "修炼：" + aScore[1].innerHTML;
+					jsItem.score_advanced = "进阶：" + aScore[2].innerHTML;
 					//价格
 					jsItem.price = aItem[i].getElementsByTagName("p")[1].innerHTML;
 					console.log(jsItem);
