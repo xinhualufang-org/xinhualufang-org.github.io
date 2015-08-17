@@ -72,7 +72,7 @@ function analysis(str) {	//str为html源代码
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
-			imgcss: "",			//头像类{.proi-j}i：0少林 1明教 2丐帮 3武当 4峨眉 5星宿 6天龙 7天山 8逍遥 9慕容 10唐门；j：0女 1男
+			imgcss: "",			//头像类{.proi-j}i：0少林 1明教 2丐帮 3武当 4峨眉 5星宿 6天龙 7天山 8逍遥 10慕容 11唐门；j：0女 1男
 			serial_num: "",		//商品号
 			group: "",			//门派
 			sex: "",			//性别
