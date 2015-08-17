@@ -4,8 +4,9 @@
 	- [ ] 实现`无条件查询`信息的展示，包括：门派性别的头像、门派、性别、等级、角色名、是否有重楼、装备评分、修炼评分、进阶评分、价格；
 	- [ ] 上拉加载20条；
 	- [ ] 
-
-### 1. ul源码---采集于`2015年8月14号`
+- - -	
+## 数据挖掘
+#### 1. ul源码---采集于`2015年8月14号`
 ```html
 <ul class="pg-goods-list" id="J_good_list">
 	<li class="role-item first odd">
@@ -44,7 +45,7 @@
 </ul>
 ```
 
-### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表，然后得到20个li对象`aItem`。
+#### 2. 获取html源代码，然后转为dom对象，接着通过id找到ul列表，然后得到20个li对象`aItem`。
 ```javascript
 var aItems = new Array();	//此数组存储所有aItem数据
 function analysis(str) {	//str为html源代码
@@ -55,7 +56,7 @@ function analysis(str) {	//str为html源代码
 }
 ```
 
-### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
+#### 3. 从`aItem`数组中循环分析每个元素得到账号简略信息。
 * 关于头像
 
 |            头像             |  文件名	 | 					          background-position                                  |
@@ -107,6 +108,12 @@ function analysis(str) {	//str为html源代码
 		jsItem.price = aItem[i].getElementsByTagName("p")[1].innerHTML;
 	}
 ```
+- - -
+## 界面实现
+#### 1. 素材收集
+
+
+- - -
 
 ### 角色详情
 * good-info
