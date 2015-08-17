@@ -120,6 +120,18 @@ function analysis(str) {	//str为html源代码
 * 重楼样式
 
 
+## 翻页功能
+
+### 1. 参数分析
+* `world_id`，区服选择
+* `profession`，门派
+* `equipscore`，装备评分，a-b，b小于a时，则为筛选所有大于a的
+* `xiulian`，修炼评分，同上
+* `xinfa`，心法评分，同上
+* `jinjiexiulian`，进阶评分，同上
+* `level`，等级
+* `page_num`，页码
+
 ## 角色详情
 
 待添加
