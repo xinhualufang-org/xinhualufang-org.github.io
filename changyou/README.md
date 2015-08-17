@@ -81,12 +81,16 @@ function analysis(str) {	//str为html源代码
 			score_practice: "",	//修炼评分
 			score_advanced: ""	//进阶评分
 		};
-		//头像类可根据原网页得到，或者根据门派+性别自行判断
+		//头像类可根据原网页得到，或者根据门派+性别自行判断，其中r-img规定图片大小72*72
 		jsItem.imgcss = aItem[i].getElementByTagName("a")[0].className;
 		//得到商品号，18位或17位
 		jsItem.serial_num = aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
 		//门派+性别+等级
-		
+		var sGsg = aItem[i].getElementsByTagName("span")[1].innerHTML;
+		var aGSG = sGsg.slice(1, sGsg.length-1).split(" ");
+		jsItem.group = aGSG[0];
+		jsItem.sex = aGSG[1];
+		jsItem.grade = aGSG[2];
 	}
 ```
 
