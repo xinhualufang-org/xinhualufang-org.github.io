@@ -1,0 +1,11 @@
+.xhlf-list {
+	padding: 12px;
+	border-top: 1px solid #F0D895;
+}
+.xhlf-item-r {
+	padding-left: 8px;
+}
+.xhlf-price {
+	color: #ED1C24;
+	font-size: larger;
+}

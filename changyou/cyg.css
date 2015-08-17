@@ -1,0 +1,100 @@
+.r-img {
+	width: 72px;
+	height: 72px;
+}
+/*少林*/
+.pro0-0 {
+	background: url("img/pro1.jpg") -95px -95px no-repeat;
+}
+.pro0-1 {
+	background: url("img/pro1.jpg") -5px -95px no-repeat;
+}
+/*明教*/
+.pro1-0 {
+	background: url("img/pro4.jpg") -95px -5px no-repeat;
+}
+.pro1-1 {
+	background: url("img/pro4.jpg") -5px -5px no-repeat;
+}
+/*丐帮*/
+.pro2-0 {
+	background: url("img/pro3.jpg") -95px -5px no-repeat;
+}
+.pro2-1 {
+	background: url("img/pro3.jpg") -5px -5px no-repeat;
+}
+/*武当*/
+.pro3-0 {
+	background: url("img/pro3.jpg") -95px -95px no-repeat;
+}
+.pro3-1 {
+	background: url("img/pro3.jpg") -5px -95px no-repeat;
+}
+/*峨眉*/
+.pro4-0 {
+	background: url("img/pro2.jpg") -95px -5px no-repeat;
+}
+.pro4-1 {
+	background: url("img/pro2.jpg") -5px -5px no-repeat;
+}
+/*星宿*/
+.pro5-0 {
+	background: url("img/pro5.jpg") -95px -95px no-repeat;
+}
+.pro5-1 {
+	background: url("img/pro5.jpg") -5px -95px no-repeat;
+}
+/*天龙*/
+.pro6-0 {
+	background: url("img/pro1.jpg") -95px -5px no-repeat;
+}
+.pro6-1 {
+	background: url("img/pro1.jpg") -5px -5px no-repeat;
+}
+/*天山*/
+.pro7-0 {
+	background: url("img/pro2.jpg") -95px -95px no-repeat;
+}
+.pro7-1 {
+	background: url("img/pro2.jpg") -5px -95px no-repeat;
+}
+/*逍遥*/
+.pro8-0 {
+	background: url("img/pro4.jpg") -95px -95px no-repeat;
+}
+.pro8-1 {
+	background: url("img/pro4.jpg") -5px -95px no-repeat;
+}
+/*慕容*/
+.pro10-0 {
+	background: url("img/pro5.jpg") -95px -5px no-repeat;
+}
+.pro10-1 {
+	background: url("img/pro5.jpg") -5px -5px no-repeat;
+}
+/*唐门*/
+.pro11-0 {
+	background: url("img/pro6.jpg") -95px -5px no-repeat;
+}
+.pro11-1 {
+	background: url("img/pro6.jpg") -5px -5px no-repeat;
+}
+
+/*条目背景色*/
+.col1 {
+	background: #FFFBE4;
+}
+.col2 {
+	background: #FAF2D4;
+}
+
+/*重楼*/
+.hascl {
+	display: inline-block;
+	background: url("img/cl.png") -50px -1px no-repeat;
+	width: 40px;
+	height: 19px;
+}
+.nocl {
+	display: none;
+}

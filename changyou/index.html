@@ -4,100 +4,32 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<link href="../css/box.mine.css" rel="stylesheet">
+		<link href="cyg.css" rel="stylesheet">
+		<link href="xhlf.mine.css" rel="stylesheet">
 		<link href="../ionic/libs/ionic/css/ionic.min.css" rel="stylesheet">
-		<script src="../ionic/libs/ionic/js/ionic.bundle.min.js"></script>
-		<style>
-			.r-img {
-				width: 72px;
-				height: 72px;
-			}
-			/*少林*/
-			.pro0-0 {
-				background: url("img/pro1.jpg") -95px -95px no-repeat;
-			}
-			.pro0-1 {
-				background: url("img/pro1.jpg") -5px -95px no-repeat;
-			}
-			/*明教*/
-			.pro1-0 {
-				background: url("img/pro4.jpg") -95px -5px no-repeat;
-			}
-			.pro1-1 {
-				background: url("img/pro4.jpg") -5px -5px no-repeat;
-			}
-			/*丐帮*/
-			.pro2-0 {
-				background: url("img/pro3.jpg") -95px -5px no-repeat;
-			}
-			.pro2-1 {
-				background: url("img/pro3.jpg") -5px -5px no-repeat;
-			}
-			/*武当*/
-			.pro3-0 {
-				background: url("img/pro3.jpg") -95px -95px no-repeat;
-			}
-			.pro3-1 {
-				background: url("img/pro3.jpg") -5px -95px no-repeat;
-			}
-			/*峨眉*/
-			.pro4-0 {
-				background: url("img/pro2.jpg") -95px -5px no-repeat;
-			}
-			.pro4-1 {
-				background: url("img/pro2.jpg") -5px -5px no-repeat;
-			}
-			/*星宿*/
-			.pro5-0 {
-				background: url("img/pro5.jpg") -95px -95px no-repeat;
-			}
-			.pro5-1 {
-				background: url("img/pro5.jpg") -5px -95px no-repeat;
-			}
-			/*天龙*/
-			.pro6-0 {
-				background: url("img/pro1.jpg") -95px -5px no-repeat;
-			}
-			.pro6-1 {
-				background: url("img/pro1.jpg") -5px -5px no-repeat;
-			}
-			/*天山*/
-			.pro7-0 {
-				background: url("img/pro2.jpg") -95px -95px no-repeat;
-			}
-			.pro7-1 {
-				background: url("img/pro2.jpg") -5px -95px no-repeat;
-			}
-			/*逍遥*/
-			.pro8-0 {
-				background: url("img/pro4.jpg") -95px -95px no-repeat;
-			}
-			.pro8-1 {
-				background: url("img/pro4.jpg") -5px -95px no-repeat;
-			}
-			/*慕容*/
-			.pro10-0 {
-				background: url("img/pro5.jpg") -95px -5px no-repeat;
-			}
-			.pro10-1 {
-				background: url("img/pro5.jpg") -5px -5px no-repeat;
-			}
-			/*唐门*/
-			.pro11-0 {
-				background: url("img/pro6.jpg") -95px -5px no-repeat;
-			}
-			.pro11-1 {
-				background: url("img/pro6.jpg") -5px -5px no-repeat;
-			}
-		</style>
 	</head>
 	<body ng-controller="ctrl">
 		<ion-content>
-			<div ng-repeat="item in aItems" class="ub">
-				<div class="{{item.imgcss}}"></div>
-				<div ng-bind="item.group"></div>
+			<div ng-repeat="item in aItems" class="ub ub-ver {{item.index}} xhlf-list">
+				<div class="ub">
+					<div class="{{item.imgcss}}"></div>
+					<div class="ub ub-ver ub-f1 xhlf-item-r">
+						<div><span ng-bind="item.name"></span><i class="{{item.cl}}"></i></div>
+						<div class="ub ub-f1 ub-ac">
+							<div class="ub-f1">{{item.group}} &nbsp;&nbsp; {{item.grade}}</div>
+							<div><b class="xhlf-price">{{item.price}}</b></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					装备：{{item.score_equipment}} &nbsp;&nbsp;
+					修炼：{{item.score_practice}} &nbsp;&nbsp;
+					进阶：{{item.score_advanced}}
+				</div>
 			</div>
 		</ion-content>
 	</body>
+	<script src="../ionic/libs/ionic/js/ionic.bundle.min.js"></script>
 	<script>
 		var module = angular.module("app", ["ionic"]);
 		module.controller("ctrl", function($scope, $http) {
@@ -120,18 +52,21 @@
 				
 				for (var i=0; i<20; i++) {
 					var jsItem = {
+						index: "",			//奇偶判断，奇col1，偶col2
 						imgcss: "",			//头像类{.proi-j}i：0少林 1明教 2丐帮 3武当 4峨眉 5星宿 6天龙 7天山 8逍遥 9慕容 10唐门；j：0女 1男
 						serial_num: "",		//商品号
 						group: "",			//门派
 						sex: "",			//性别
 						grade: "",			//等级
 						name: "",			//角色名
-						cl: "",				//bool，重楼
+						cl: "",				//重楼
 						score_equipment: "",//装备评分
 						score_practice: "",	//修炼评分
 						score_advanced: "",	//进阶评分
 						price: ""
 					};
+					//奇偶
+					jsItem.index = i%2 == 0 ? "col1" : "col2";
 					//头像类可根据原网页得到，或者根据门派+性别自行判断
 					jsItem.imgcss = aItem[i].getElementsByTagName("a")[0].className;
 					//得到商品号，18位或17位
@@ -145,7 +80,7 @@
 					//角色名
 					jsItem.name = aItem[i].getElementsByTagName("a")[1].lastChild.nodeValue;
 					//重楼
-					jsItem.cl = aItem[i].querySelector(".icon-cl") ? true : false;
+					jsItem.cl = aItem[i].querySelector(".icon-cl") ? "hascl" : "nocl";
 					//评分
 					var aScore = aItem[i].getElementsByTagName("b");
 					jsItem.score_equipment = aScore[0].innerHTML;
