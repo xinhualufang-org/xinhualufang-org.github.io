@@ -1,7 +1,7 @@
 # 畅易阁APP
 > 1. 变量名采用匈牙利命名法
 2. 版本1.0目标
-	- [ ] 实现`无条件查询`信息的展示，包括：门派性别的头像、门派、性别、等级、角色名、是否有重楼、装备评分、修炼评分、进阶评分；
+	- [ ] 实现`无条件查询`信息的展示，包括：门派性别的头像、门派、性别、等级、角色名、是否有重楼、装备评分、修炼评分、进阶评分、价格；
 	- [ ] 上拉加载20条；
 	- [ ] 
 
@@ -67,6 +67,8 @@ function analysis(str) {	//str为html源代码
 ![](img/pro5.jpg "慕容&星宿") | pro5.jpg | MR男：-5px -5px <br>MR女：-95px -5px <br>XX男：-5px -95px <br>XX女：-95px -95px |
 ![](img/pro6.jpg "唐门")      | pro6.jpg | TM男：-5px -5px <br>TM女：-95px -5px                                            |
 
+* 实现
+
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
@@ -79,7 +81,8 @@ function analysis(str) {	//str为html源代码
 			cl: "",				//bool，重楼
 			score_equipment: "",//装备评分
 			score_practice: "",	//修炼评分
-			score_advanced: ""	//进阶评分
+			score_advanced: "",	//进阶评分
+			price: ""			//价格
 		};
 		//头像类可根据原网页得到，或者根据门派+性别自行判断，其中r-img规定图片大小72*72
 		jsItem.imgcss = aItem[i].getElementByTagName("a")[0].className;
@@ -91,6 +94,17 @@ function analysis(str) {	//str为html源代码
 		jsItem.group = aGSG[0];
 		jsItem.sex = aGSG[1];
 		jsItem.grade = aGSG[2];
+		//角色名
+		jsItem.name = aItem[i].getElementsByTagName("a")[1].lastChild.nodeValue;
+		//重楼
+		jsItem.cl = aItem[i].querySelector(".icon-cl") ? true : false;
+		//评分
+		var aScore = aItem[i].getElementsByTagName("b");
+		jsItem.score_equipment = aScore[0].innerHTML;
+		jsItem.score_practice = aScore[1].innerHTML;
+		jsItem.score_advanced = aScore[2].innerHTML;
+		//价格
+		jsItem.price = aItem[i].getElementsByTagName("p")[1].innerHTML;
 	}
 ```
 
