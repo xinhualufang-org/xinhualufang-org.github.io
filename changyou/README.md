@@ -66,10 +66,11 @@ function analysis(str) {	//str为html源代码
 ![](img/pro4.jpg "明教&逍遥") | pro4.jpg | MJ男：-5px -5px <br>MJ女：-95px -5px <br>XY男：-5px -95px <br>XY女：-95px -95px |
 ![](img/pro5.jpg "慕容&星宿") | pro5.jpg | MR男：-5px -5px <br>MR女：-95px -5px <br>XX男：-5px -95px <br>XX女：-95px -95px |
 ![](img/pro6.jpg "唐门")      | pro6.jpg | TM男：-5px -5px <br>TM女：-95px -5px                                            |
+
 ```javascript
 	for (var i=0; i<20; i++) {
 		var jsItem = {
-			imgcss: "",			//头像类
+			imgcss: "",			//头像类{.proi-j}i：0少林 1明教 2丐帮 3武当 4峨眉 5星宿 6天龙 7天山 8逍遥 9慕容 10唐门；j：0女 1男
 			serial_num: "",		//商品号
 			group: "",			//门派
 			sex: "",			//性别
@@ -80,6 +81,8 @@ function analysis(str) {	//str为html源代码
 			score_practice: "",	//修炼评分
 			score_advanced: ""	//进阶评分
 		};
+		//头像类可根据原网页得到，或者根据门派+性别自行判断
+		jsItem.imgcss = aItem[i].getElementByTagName("a")[0].className;
 		//得到商品号，18位或17位
 		jsItem.serial_num = aItem[i].getElementsByTagName("a")[0].href.split("=")[1];
 		//门派+性别+等级
