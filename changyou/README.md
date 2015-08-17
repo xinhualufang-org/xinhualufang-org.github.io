@@ -111,7 +111,7 @@ function analysis(str) {	//str为html源代码
 
 ## 界面实现
 #### 1. 素材收集
-
+* 奇数条目背景色`#FFFBE4`，偶数条目背景色`#FAF2D4`；
 
 
 ### 角色详情
